@@ -8,6 +8,8 @@ import { GrInstagram } from "react-icons/gr";
 import { FiTwitter } from "react-icons/fi";
 import Link from "next/link";
 
+// THE SIMPLE ACCORDION BUTTON WITH THE INNER TEXT
+
 export default function Accordion(props) {
   const [isShowing, setIsShowing] = useState(true);
 
@@ -17,6 +19,7 @@ export default function Accordion(props) {
 
   return (
     <div className="w-11/12 lg:w-5/12 mb-9 leading-4 rounded-md p-3 text-white bg-[#19151B] lg:ml-7 ">
+      {/* ACCORDION BUTTON WITH THE TITLE */}
       <button
         className="w-full relative px-2 border-none bg-transparent outline-none cursor-pointer flex h-10 items-center text-left "
         onClick={toggle}
@@ -28,14 +31,14 @@ export default function Accordion(props) {
           {isShowing ? <MdOutlineKeyboardArrowDown /> : <RiArrowUpSLine />}
         </div>
       </button>
+      {/* THE INNER TEXT SHOWED WHEN ACCORDION BUTTON IS CLICKED */}
+
+      {/* THE INNER TEXT IS CALLED THROUGH PROPS & LINKS WITH THE ICONS ARE WRITTEN BELOW */}
       <div
         className="overflow-auto p-3 w-full h-72 mt-4 "
         style={{
           display: isShowing ? "block" : "none",
         }}
-        // dangerouslySetInnerHTML={{
-        //   __html: props.content,
-        // }}
       >
         {props.content}
         <div className="flex flex-col">

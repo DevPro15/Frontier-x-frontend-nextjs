@@ -4,6 +4,8 @@ import { RiArrowUpSLine } from "react-icons/ri";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 
+// ACCORDION WITH THE SELECTABLE CARDS
+
 export default function AccordionScrollBar(props) {
   const [isShowing1, setIsShowing1] = useState(true);
 
@@ -13,6 +15,7 @@ export default function AccordionScrollBar(props) {
 
   return (
     <div className="w-11/12 md:ml-5  lg:w-1/2 mb-9 leading-4 rounded-md p-3 text-white bg-[#19151B] ">
+      {/* SELECTABLE ACCORDION BUTTON  */}
       <button
         className="w-full relative px-2 border-none bg-transparent outline-none cursor-pointer flex h-10 items-center text-left "
         onClick={toggle}
@@ -32,10 +35,8 @@ export default function AccordionScrollBar(props) {
         style={{
           display: isShowing1 ? "block" : "none",
         }}
-        // dangerouslySetInnerHTML={{
-        //   __html: props.content,
-        // }}
       >
+        {/* THE SELECTABLE CARDS */}
         <div className="md:flex mb-2 justify-center items-center">
           <button className="mb-2 focus:border-4 active:border-4 h-32 w-44 p-4 bg-[#050708] flex flex-col justify-center items-center ml-2 rounded-lg border-rose-500">
             <p className="text-slate-400">Accesories & ears</p>

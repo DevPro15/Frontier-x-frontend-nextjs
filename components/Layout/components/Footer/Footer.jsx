@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Logo2 from "../../../../public/images/logo-2-01-01.png";
 
+//  FOOTER COMPONENT
+
 function Footer() {
   return (
     <footer

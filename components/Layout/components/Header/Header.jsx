@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "../../../../public/images/logo-1-01.png";
 
-// NAVBAR COMPONENT
+// NAVBAR COMPONENT WITH RESPONSIVE MOBILE VIEW
 
 function Header() {
   const [isShowing, setIsShowing] = useState(false);

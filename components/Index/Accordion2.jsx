@@ -8,6 +8,8 @@ import { GrInstagram } from "react-icons/gr";
 import { FiTwitter } from "react-icons/fi";
 import Link from "next/link";
 
+// THE 3rd ACCORDION BUTTON BELOW THE SCROLLABLE ACCORDION BUTTON
+
 export default function Accordion2(props) {
   const [isShowing, setIsShowing] = useState(false);
 
@@ -17,6 +19,7 @@ export default function Accordion2(props) {
 
   return (
     <div className="lg:ml-60 w-11/12 lg:w-8/12 mb-9 leading-4 rounded-md p-3 text-white bg-[#19151B] ">
+      {/* ACCORDION BUTTON WITH THE TITLE */}
       <button
         className="w-full relative p-1 border-none bg-transparent outline-none cursor-pointer flex h-10 items-center text-left "
         onClick={toggle}
@@ -28,6 +31,10 @@ export default function Accordion2(props) {
           {isShowing ? <MdOutlineKeyboardArrowDown /> : <RiArrowUpSLine />}
         </div>
       </button>
+      {/* THE INNER TEXT SHOWED WHEN ACCORDION BUTTON IS CLICKED */}
+
+      {/* THE INNER TEXT IS CALLED THROUGH PROPS & LINKS WITH THE ICONS ARE WRITTEN BELOW */}
+
       <div
         className="overflow-auto p-1 w-full h-72 mt-4 "
         style={{

@@ -6,7 +6,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
+        {/* TITLE FOR THE WEBSITE */}
         <title>FRONTIER X</title>
+        {/* GOOGLE FONTS */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
