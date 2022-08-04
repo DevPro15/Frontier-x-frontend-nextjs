@@ -17,26 +17,32 @@ function Index() {
         {/* THE HERO BANNER */}
         <div className="relative flex justify-center ">
           <img
-            className="w-full pt-10 px-2 rounded-lg "
+            className="w-full px-2 pt-10 rounded-lg "
+            alt="banner"
             src="https://lh3.googleusercontent.com/EIdiJxQ5xPNFFtQ1uhVHO0BZB5duF3IU3voOnkptZ74crZEbuTACV89YyOSIhampl4o2-4XjGd5Fh7JQUgBkA3PKxPvNdoCAoccR=h600"
           />
         </div>
         {/* THE CENTER CIRCLE IMAGE */}
         <div className="absolute w-12 h-12 overflow-hidden rounded-full mb-60 lg:mb-14 md:w-32 md:h-32 ring-1 ring-black-300 ring-offset-1">
-          <Image objectFit="cover" src={CircleLogo} priority />
+          <Image
+            objectFit="cover"
+            src={CircleLogo}
+            alt="circle image"
+            priority
+          />
         </div>
         {/* HEADER TEXT */}
         <div className="flex flex-col items-center justify-center w-full mt-20 md:mt-32">
-          <h2 className="font-semibold text-5xl text-white">Lorem ipsum</h2>
-          <p className="text-red-800 text-lg ">
-            Created by: <span className="text-white text-lg"> lorem ipsum</span>
+          <h2 className="text-5xl font-semibold text-white">Lorem ipsum</h2>
+          <p className="text-lg text-red-800 ">
+            Created by: <span className="text-lg text-white"> lorem ipsum</span>
           </p>
-          <p className="text-white text-lg">
+          <p className="text-lg text-white">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           </p>
         </div>
         {/* 3 BUTTONS BELOW THE TEXT */}
-        <div className="justify-center items-center ml-2 md:ml-0 md:flex mb-8 mt-14">
+        <div className="items-center justify-center mb-8 ml-2 md:ml-0 md:flex mt-14">
           <button
             type="button"
             className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
@@ -58,18 +64,25 @@ function Index() {
         </div>
       </div>
       {/* FUNCTIONAL ACCORDION COMPONENTS */}
-      <div className="flex justify-center items-center flex-col lg:flex-row ">
+      <div className="flex flex-col items-center justify-center lg:flex-row ">
         <Accordion
           title="Lorem ipsum"
           content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam iste voluptate tempora consequuntur voluptatibus architecto cum aliquid fugiat, minus esse eaque deserunt. Ad voluptate recusandae, eos mollitia rem unde praesentium?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam iste voluptate tempora consequuntur voluptatibus architecto cum aliquid fugiat, minus esse eaque deserunt. Ad voluptate recusandae, eos mollitia rem unde praesentium?"
         />
         <AccordionScrollBar title="Lorem ipsum" />
       </div>
-      <div className="flex justify-center items-center flex-col md:flex-row lg:ml-96 ">
-        <Accordion2
+      <div className="w-full md:flex">
+        <div className="w-5/12 sm:hidden lg:block"></div>
+        <div className="w-full px-4 ml-0 lg:ml-0 lg:w-1/2 md:px-7">
+          <Accordion2
+            title="Lorem ipsum"
+            content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam iste voluptate tempora consequuntur voluptatibus architecto cum aliquid fugiat, minus esse eaque deserunt. Ad voluptate recusandae, eos mollitia rem unde praesentium?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam iste voluptate tempora consequuntur voluptatibus architecto cum aliquid fugiat, minus esse eaque deserunt. Ad voluptate recusandae, eos mollitia rem unde praesentium?"
+          />
+        </div>
+        {/* <Accordion2
           title="Lorem ipsum"
           content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam iste voluptate tempora consequuntur voluptatibus architecto cum aliquid fugiat, minus esse eaque deserunt. Ad voluptate recusandae, eos mollitia rem unde praesentium?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam iste voluptate tempora consequuntur voluptatibus architecto cum aliquid fugiat, minus esse eaque deserunt. Ad voluptate recusandae, eos mollitia rem unde praesentium?"
-        />
+        /> */}
       </div>
     </div>
   );

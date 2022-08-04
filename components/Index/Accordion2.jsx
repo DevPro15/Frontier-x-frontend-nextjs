@@ -8,9 +8,9 @@ import { GrInstagram } from "react-icons/gr";
 import { FiTwitter } from "react-icons/fi";
 import Link from "next/link";
 
-// THE 3rd ACCORDION BUTTON BELOW THE SCROLLABLE ACCORDION BUTTON
+// THE SIMPLE ACCORDION BUTTON WITH THE INNER TEXT
 
-export default function Accordion2(props) {
+export default function Accordion(props) {
   const [isShowing, setIsShowing] = useState(false);
 
   const toggle = () => {
@@ -18,31 +18,27 @@ export default function Accordion2(props) {
   };
 
   return (
-    <div className="lg:ml-60 w-11/12 lg:w-8/12 mb-9 leading-4 rounded-md p-3 text-white bg-[#19151B] ">
+    <div className="w-full mb-9 leading-4 rounded-md p-3 text-white bg-[#19151B] ml-0 lg:ml-16 ">
       {/* ACCORDION BUTTON WITH THE TITLE */}
       <button
-        className="w-full relative p-1 border-none bg-transparent outline-none cursor-pointer flex h-10 items-center text-left "
+        className="relative flex items-center w-full h-10 px-2 text-left bg-transparent border-none outline-none cursor-pointer "
         onClick={toggle}
         type="button"
       >
         <TbCircles className="mr-3" />
         <div className="flex justify-between w-full">
-          <h1 className="text-md font-semibold">{props.title}</h1>
+          <h1 className="font-semibold text-md">{props.title}</h1>
           {isShowing ? <MdOutlineKeyboardArrowDown /> : <RiArrowUpSLine />}
         </div>
       </button>
       {/* THE INNER TEXT SHOWED WHEN ACCORDION BUTTON IS CLICKED */}
 
       {/* THE INNER TEXT IS CALLED THROUGH PROPS & LINKS WITH THE ICONS ARE WRITTEN BELOW */}
-
       <div
-        className="overflow-auto p-1 w-full h-72 mt-4 "
+        className="w-full p-3 mt-4 overflow-auto h-72 "
         style={{
           display: isShowing ? "block" : "none",
         }}
-        // dangerouslySetInnerHTML={{
-        //   __html: props.content,
-        // }}
       >
         {props.content}
         <div className="flex flex-col">
